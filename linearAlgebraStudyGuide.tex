@@ -1,0 +1,75 @@
+\documentclass[oneside]{report}
+
+\title{Linear Algebra Study Guide}
+\author{Orgho A. Neogi}
+\date{20 September 2017}
+
+\usepackage{amsmath}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\usepackage{graphicx}
+
+\usepackage{float}
+
+\usepackage[colorlinks=true]{hyperref}
+
+\begin{document}
+
+\maketitle
+
+\section{Systems of Linear Equations}
+
+A system of linear equations has
+
+\begin{enumerate}
+  \item no solution, or
+  \item exactly one solution, or
+  \item infinitely many solutions.
+\end{enumerate}
+
+A system of linear equations is said to be consistent if it has either one solution or
+infinitely many solutions; a system is inconsistent if it has no solution.
+
+Given an example System of Equations:
+
+\begin{alignat}{8}
+  &x_1 - &2x_2 + &x3  &= &0 \\
+  &     &2x_2 - &8x_3 &= &8 \\
+  &5x_1 &     - &5x_3 &= &10
+\end{alignat}
+
+The matrix of coefficients is:
+
+\begin{center}
+$\begin{bmatrix}
+  &1 &2 &1\\
+  &0 &2 &-8\\
+  &5 &0 &-5
+\end{bmatrix}$
+\end{center}
+
+The augmented matrix is:
+\begin{center}
+  $\begin{bmatrix}[ccc|c]
+    1 &2 &1  &0\\
+    0 &2 &-8 &8\\
+    5 &0 &-5 &10
+  \end{bmatrix}$
+\end{center}
+
+A system of linear equations can be solved using elementary row operations.
+
+Elementary row operations are:
+\begin{enumerate}
+  \item (Replacement) Replace one row by the sum of itself and a multiple of another row.
+  \item (Interchange) Interchange two rows.
+  \item (Scaling) Multiply all entries in a row by a nonzero constant.
+\end{enumerate}
+
+Row operations can be applied to any matrix and are reversible.
+\end{document}

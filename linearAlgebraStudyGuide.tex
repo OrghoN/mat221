@@ -18,9 +18,17 @@
 
 \usepackage[colorlinks=true]{hyperref}
 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+
 \begin{document}
 
 \maketitle
+
+\chapter{Introduction}
+
 
 \section{Systems of Linear Equations}
 
@@ -72,4 +80,68 @@ Elementary row operations are:
 \end{enumerate}
 
 Row operations can be applied to any matrix and are reversible.
+
+
+\section{Row Reduction and Echelon Forms}
+
+\begin{definition}[Echelon Form]
+A rectangular matrix is in echelon form (or row echelon form) if it has the
+following three properties:
+
+\begin{enumerate}
+  \item All nonzero rows are above any rows of all zeros.
+  \item Each leading entry of a row is in a column to the right of the leading entry of the row above it.
+  \item All entries in a column below a leading entry are zeros.
+
+  If a matrix in echelon form satisfies the following additional conditions, then it is in reduced row echelon form.
+
+ \item The leading entry in each nonzero row is 1.
+ \item Each leading 1 is the only nonzero entry in its column.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Uniqueness of the Reduced Echelon Form]
+  Each matrix is row equivalent to one and only one reduced echelon matrix.
+\end{theorem}
+
+\begin{definition}[Pivot Position]
+  A pivot position in a matrix A is a location in A that corresponds to a leading 1
+  in the reduced echelon form of A .
+\end{definition}
+
+\begin{definition}[Pivot Column]
+  A pivot column is a column of A that contains
+  a pivot position.
+\end{definition}
+
+\begin{theorem}[Existence and Uniqueness Theorem]
+  A linear system is consistent if and only if the rightmost column of the augmented
+  matrix is not a pivot column—that is, if and only if an echelon form of the
+  augmented matrix has no row of the form:
+
+  \begin{center}
+    $\begin{bmatrix}
+      &0 &\dots &0  &b
+    \end{bmatrix}$
+    With $b$ non-zero
+  \end{center}
+If a linear system is consistent, then the solution set contains either (i) a unique
+  solution, when there are no free variables, or (ii) infinitely many solutions, when
+  there is at least one free variable.
+\end{theorem}
+
+Using Row Reduction to Solve a Linear System:
+\begin{enumerate}
+  \item Write the augmented matrix of the system.
+  \item Use the row reduction algorithm to obtain an equivalent augmented matrix in echelon form. Decide whether the system is consistent. If there is no solution, stop; otherwise, go to the next step.
+  \item Write the system of equations corresponding to the matrix obtained in step 3.
+  \item Rewrite each nonzero equation from step 4 so that its one basic variable is expressed in terms of any free variables appearing in the equation.
+\end{enumerate}
+
+
+
+
+
+
+
 \end{document}

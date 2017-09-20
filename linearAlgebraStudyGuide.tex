@@ -4,6 +4,7 @@
 \author{Orgho A. Neogi}
 \date{20 September 2017}
 
+\usepackage{amssymb}
 \usepackage{amsmath}
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
@@ -138,10 +139,41 @@ Using Row Reduction to Solve a Linear System:
   \item Rewrite each nonzero equation from step 4 so that its one basic variable is expressed in terms of any free variables appearing in the equation.
 \end{enumerate}
 
+\section{Vector Equations}
 
+A matrix with only one column is called a column vector, or simply a vector.
 
+Algebraic Properties of $\mathbb{R}^n$:
 
+For all $\vec{u}$, $\vec{v}$, $\vec{w}$ in $\mathbb{R}^n$ and all scalars $c$ and $d$:
+\begin{enumerate}
+  \item $\vec{u} + \vec{v} = \vec{v} + \vec{u}$
+  \item $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$
+  \item $\vec{u} + 0 = 0 + \vec{u} = 0$
+  \item $\vec{u} + (-\vec{u}) = -\vec{u} + \vec{u} = 0$, where $-\vec{u}$ denotes $-1\vec{u}$
+  \item $c(\vec{u} + \vec{v}) = c\vec{u} + c\vec{v}$
+  \item $(c + d)\vec{u} = c\vec{u} + d\vec{u}$
+  \item $c(d\vec{u}) = (cd)\vec{u}$
+  \item $1\vec{u} = \vec{u}$
+\end{enumerate}
 
+A vector equation
+
+\begin{center}
+  $x_1\vec{a_1} + x_2\vec{a_2} + \dots + x_n\vec{a_n} = \vec{b}$
+\end{center}
+
+has the same solution set as the linear system whose augmented matrix is
+
+\begin{center}
+   $\begin{bmatrix}[cccc|c]
+      \vec{a_1} &\vec{a_2} &\dots &\vec{a_n} &\vec{b}
+    \end{bmatrix}$
+\end{center}
+
+\begin{definition}[span]
+  If $\vec{v_1},\dots,\vec{v_p}$ are in $\mathbb{R}^n$, then the set of all linear combinations of $\vec{v_1},\dots,\vec{v_p}$ is denoted by $Span\{\vec{v_1},\dots,\vec{v_p}\}$ and is called the subset of $\mathbb{R}^n$ spanned by $\vec{v_1},\dots,\vec{v_p}$. That is $Span\{\vec{v_1},\dots,\vec{v_p}\}$ is the collection of all vectors that can be written in the form $c_1\vec{v_1} + c_2\vec{v_2} + \dots + c_p\vec{v_p}$ with $c_1,\dots,c_p$ scalars.
+\end{definition}
 
 
 \end{document}

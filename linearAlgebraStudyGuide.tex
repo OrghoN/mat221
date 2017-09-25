@@ -1,3 +1,4 @@
+
 \documentclass[oneside]{report}
 
 \title{Linear Algebra Study Guide}
@@ -28,7 +29,7 @@
 
 \maketitle
 
-\chapter{Introduction}
+\chapter{Linear Equations in Linear Algebra}
 
 
 \section{Systems of Linear Equations}
@@ -214,6 +215,25 @@ If $A$ is an $m \times n$ matrix, $\vec{u}$ and $\vec{v}$ are vectors in $\mathb
   \item $A(c\vec{u}) = c(A\vec{u})$
 \end{enumerate}
 \end{theorem}
+
+\section{Solution Sets of Linear Systems}
+
+The homogeneous equation $A\vec{x} = \vec{0}$ has a non trivial solution if and only if the equation has at least one free variable.
+
+\begin{theorem}
+  Suppose the equation $A\vec{x} = \vec{b}$ is consistent for some given $\vec{b}$, and let $\vec{p}$ be a solution. Then the solution set of $A\vec{x} = \vec{b}$ is the set of all vectors of the form $\vec{w} = \vec{p} + \vec{v_h}$, where $\vec{v_h}$ is any solution to the homogeneous equation $A\vec{x} = \vec{0}$.
+\end{theorem}
+
+Writing a solution set (of a consistent system) in parametric vector form:
+\begin{enumerate}
+  \item Row reduce the augmented matrix to reduced echelon form.
+  \item Express each basic variable in terms of any free variables appearing in an
+equation.
+  \item Write a typical solution $\vec{x}$ as a vector whose entries depend on the free
+variables, if any.
+  \item Decompose $\vec{x}$ into a linear combination of vectors (with numeric entries) using
+the free variables as parameters.
+\end{enumerate}
 
 
 

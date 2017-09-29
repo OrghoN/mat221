@@ -266,4 +266,31 @@ is linearly dependent. That is, any set $S = \{\vec{v_1}, \dots , \vec{v_p}\}$ i
   If a set $S = \{\vec{v_1}, \dots , \vec{v_p}\}$ in $\mathbb{R}^n$ , contains the zero vector, then the set is linearly dependent.
 \end{theorem}
 
+\section{Introduction to Linear Transformations}
+
+\begin{definition}[Linear Transformation]
+  A transformation of mapping $T$ is linear if:
+  \begin{enumerate}
+    \item $T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v})$ for all $\vec{u}, \vec{v}$ in the domain of $T$;
+    \item $T(c\vec{u}) = cT(\vec{u})$ for all scalars $c$ and all $\vec{u}$ in the domain of $T$;
+  \end{enumerate}
+\end{definition}
+
+Every matrix transformation is a linear transformation.
+
+All Linear transformations can be written as matrix multiplication.
+
+\section{The Matrix of a Linear Transformation}
+
+\begin{theorem}
+  Let $T:\mathbb{R}^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then there exists a unique matrix
+$A$ such that:
+\begin{center}
+  $T(\vec{x})=A\vec{x}$ For all $\vec{x}$ in $\mathbb{R}^n$
+\end{center}
+\end{theorem}
+
+\chapter{Matrix Algebra}
+
+
 \end{document}

@@ -29,6 +29,8 @@
 
 \maketitle
 
+\tableofcontents
+
 \chapter{Linear Equations in Linear Algebra}
 
 
@@ -372,5 +374,92 @@ equation $A\vec{x} = \vec{0}$
 \begin{definition} [Basis]
   A basis for a subspace $H$ of $\mathbb{R}^n$ is a linearly independent set in $H$ that spans $H$
 \end{definition}
+
+\section{Dimension and Rank}
+
+\begin{definition}[dimension]
+  The dimension of a nonzero subspace $H$, denoted by dim $H$, is the number of
+vectors in any basis for $H$. The dimension of the zero subspace \{0\} is defined to
+be zero.
+\end{definition}
+
+\begin{definition}[rank]
+  The rank of a matrix $A$, denoted by rank $A$, is the dimension of the column space
+of A .
+\end{definition}
+
+\begin{theorem}[Rank Theorem]
+  If a matrix $A$ has $n$ columns, then rank $A + dim Nul A = n$
+\end{theorem}
+
+\begin{theorem}[Basis Theorem]
+  Let $H$ be a p-dimensional subspace of $\mathbb{R}^n$: Any linearly independent set of exactly
+$p$ elements in $H$ is automatically a basis for H: Also, any set of $p$ elements of $H$
+that spans $H$ is automatically a basis for $H$.
+\end{theorem}
+
+\chapter{Determinants}
+
+\section{Introduction to Determinants}
+
+\begin{definition}[determinant]
+  For $n \geq 2$ the determinant of an $n \times n$ matrix $A = [a_{ij}]$ is the sum on $n$ terms of the form $\pm a_{1j} det A_{1j}$, with plus and minus signs alternating, where the entries $a_{11}, a_{12}, \dots , a_{1n}$ are from the first row of A.
+  \begin{center}
+    $$det A = \sum_{j=1}^{n} (-1)^{1+j} a_{1j}detA_{1j}$$
+  \end{center}
+\end{definition}
+
+\begin{theorem}
+  If $A$ is a triangular matrix, then $det A$ is the product of the entries on the main
+diagonal of $A$.
+\end{theorem}
+
+\section{Properties of Determinants}
+  \begin{theorem}[Row Operations]
+    Let $A$ be a square matrix:
+    \begin{enumerate}
+      \item If a multiple of one row of $A$ is added to another row to produce a matrix $B$,
+then $det B = det A$.
+      \item If two rows of $A$ are interchanged to produce $B$, then $det B = - det A$.
+      \item If one row of $A$ is multiplied by $k$ to produce $B$ , then $det B = k \times det A$ .
+    \end{enumerate}
+  \end{theorem}
+
+  \begin{theorem}
+    A square matrix $A$ is invertible if and only if $det A \neq 0$.
+  \end{theorem}
+
+  \begin{theorem}
+    If $A$ is an $n\times n$ matrix, then $det A^T = det A$.
+  \end{theorem}
+
+  \begin{theorem}[Multiplicative Property]
+    If $A$ and $B$ are $n\times n$ matrices, then $det AB = (det A)(det B)$
+  \end{theorem}
+
+  \chapter{Eigenvalues and Eigenvectors}
+
+  \section{Eigenvalues and Eigenvectors}
+
+  \begin{definition}[Eigenvector and Eigenvalue]
+    An eigenvector of an $n\times n$ matrix $A$ is a non-zero vector $\vec{x}$ such that $A\vec{x}=\lambda\vec{x}$ for some scalar $\lambda$. A scalar $\lambda$ is called an eigenvalue of $A$ if there is a nontrivial solution $\vec{x}$ of $A\vec{x}=\lambda\vec{x}$; such an $\vec{x}$ is called an eigenvector corresponding to $\lambda$.
+  \end{definition}
+
+  \section{The Characteristic equation}
+  \begin{theorem}[The invertible Matrix theorem]
+    Let $A$ be an $n\times n$ matrix. Then $A$ is invertible if and only if:
+    \begin{enumerate}
+      \item The number $0$ is not an eigenvalue of $A$.
+      \item The determinant of $A$ is not $0$.
+    \end{enumerate}
+  \end{theorem}
+
+  The scalar equation $det(A - \lambda I) = 0$ is called the characteristic equation of A.
+
+\section{Diagonalization}
+
+\begin{theorem}[The Diagonalization Theorem]
+  An $n \times n$ matrix $A$ is diagonalizable if and only if $A$ has $n$ linearly independent eigenvectors.
+\end{theorem}
 
 \end{document}
